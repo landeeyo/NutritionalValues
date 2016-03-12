@@ -7,9 +7,10 @@
         </div>
         <div class="panel-body">
             <dl class="dl-horizontal">
-                <dt>{{ "Name" | translate }}:</dt><dd>{{ item.name | translate}}</dd>
-                <dt>{{ "Kcal" | translate }}:</dt><dd>{{ item.kcal }}</dd>
-                <dt>{{ "Kcal" | translate }}:</dt><dd>{{ item.kcal }}</dd>
+                <dt>{{ "name" | translate | capitalize}}:</dt><dd>{{ item.name | translate | capitalize}}</dd>
+                <dt>{{ "calories" | translate | capitalize }}:</dt><dd>{{ item.calories }}</dd>
+                <dt>{{ "carbohydrate" | translate | capitalize }}:</dt><dd>{{ item.carbohydrate | grams}}</dd>
+                <dt>{{ "protein" | translate | capitalize }}:</dt><dd>{{ item.protein | grams }}</dd>
             </dl>
         </div>
     </div>
@@ -23,7 +24,6 @@ carbohydrate
 	dietary fiber
 	sugar
 	dietary fiber
-sugar
 protein
 
 

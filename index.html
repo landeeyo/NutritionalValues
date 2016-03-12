@@ -24,6 +24,8 @@
     <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
 
     <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="text/javascript" src="scripts\filters\calitalize.js"></script>
+    <script type="text/javascript" src="scripts\filters\grams.js"></script>
     <script type="text/javascript" src="scripts/services/dataProvider.js"></script>
     <script type="text/javascript" src="scripts/controllers/mainCtrl.js"></script>
     <script type="text/javascript" src="scripts/controllers/listCtrl.js"></script>
@@ -38,10 +40,10 @@
                 <nav class="navbar navbar-default">
                     <div class="container">
                         <div class="navbar-header">
-                            <a class="navbar-brand" href="/">{{ "title" | translate }}</a>
+                            <a class="navbar-brand" href="/">{{ "title" | translate | capitalize }}</a>
                         </div>
                         <ul class="nav navbar-nav navbar-left">
-                            <li><a href="#list"><i class="fa fa-shield"></i>{{ "list" | translate }}</a></li>
+                            <li><a href="#list"><i class="fa fa-shield"></i>{{ "list" | translate | capitalize}}</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -49,7 +51,6 @@
 
             <!-- MAIN CONTENT AND INJECTED VIEWS -->
             <div id="main">
-
                 <div ng-view></div>
             </div>
         </div>

@@ -1,9 +1,10 @@
 {
-    "title": "Wartości odżywcze",
-    "list": "Lista",
-    "details": "Wartości odżywcze",
-    "Name": "Nazwa",
-    "Almonds": "Migdały",
-    "Kcal": "Kcal",
-    "kcal": "kcal"
+    "title": "wartości odżywcze",
+    "list": "lista",
+    "details": "wartości odżywcze",
+    "name": "nazwa",
+    "almonds": "migdały",
+    "calories": "kcal",
+    "protein":"białko",
+    "carbohydrate":"węglowodany"    
 }

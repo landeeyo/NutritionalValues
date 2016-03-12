@@ -2,10 +2,12 @@
 
 app.factory('DataProvider', function() {
     return {
-        Almonds:
+        almonds:
         {
-            name: 'Almonds',
-            kcal: 575
+            name: 'almonds',
+            calories: 575,
+            carbohydrate: 22,
+            protein: 21
         }
     }
 });
