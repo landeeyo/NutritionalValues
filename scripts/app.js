@@ -60,14 +60,6 @@ var app = angular.module("nuritionalValues", ['ngAnimate',
         tmhDynamicLocaleProvider.localeLocationPattern('bower_components/angular-i18n/angular-locale_{{locale}}.js');
     })
 
-    .constant('DATA', {
-        almond:
-        {
-            name: 'Almond',
-            kcal: 575
-        }
-    })
-
     .run(function($translate, $window) {
         // console.log($translate.proposedLanguage());
         // console.log($window.navigator.language);

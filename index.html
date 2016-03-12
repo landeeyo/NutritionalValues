@@ -33,23 +33,25 @@
 
 <body ng-controller="mainCtrl">
     <div class="container">
-        <header>
-            <nav class="navbar navbar-default">
-                <div class="container">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="/">{{ "title" | translate }}</a>
+        <div class="col-md-12">
+            <header>
+                <nav class="navbar navbar-default">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="/">{{ "title" | translate }}</a>
+                        </div>
+                        <ul class="nav navbar-nav navbar-left">
+                            <li><a href="#list"><i class="fa fa-shield"></i>{{ "list" | translate }}</a></li>
+                        </ul>
                     </div>
-                    <ul class="nav navbar-nav navbar-left">
-                        <li><a href="#list"><i class="fa fa-shield"></i>{{ "list" | translate }}</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+                </nav>
+            </header>
 
-        <!-- MAIN CONTENT AND INJECTED VIEWS -->
-        <div id="main">
+            <!-- MAIN CONTENT AND INJECTED VIEWS -->
+            <div id="main">
 
-            <div ng-view></div>
+                <div ng-view></div>
+            </div>
         </div>
     </div>
 </body>

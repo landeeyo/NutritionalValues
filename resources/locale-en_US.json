@@ -1,9 +1,9 @@
 {
-    "title":"Nutritional Values",
+    "title": "Nutritional Values",
     "list": "List",
-    
-    "Name" : "Name",
-    "Almonds" : "Almonds",
-    "Kcal" : "Kcal",
-    "kcal" : "kcal"
+    "details": "Nutritional values",
+    "Name": "Name",
+    "Almonds": "Almonds",
+    "Kcal": "Kcal",
+    "kcal": "kcal"
 }

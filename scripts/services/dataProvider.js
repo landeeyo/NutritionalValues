@@ -2,7 +2,7 @@
 
 app.factory('DataProvider', function() {
     return {
-        almond:
+        Almonds:
         {
             name: 'Almonds',
             kcal: 575
