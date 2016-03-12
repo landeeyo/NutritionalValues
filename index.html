@@ -1,18 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="nuritionalValues">
 
 <head>
     <meta charset="UTF-8">
     <title></title>
 
-    <!--<link rel="stylesheet" type="text/css" href="libs\bootstrap-3.3.6-dist\css\bootstrap.min.css">-->
-    <link rel="stylesheet" type="text/css" href="bower_components\bootstrap\dist\css\bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 
-    <!--<script type="text/javascript" src="libs\jquery-1.12.1\jquery-1.12.1.min.js"></script>
-    <script type="text/javascript" src="libs\angular-1.5.0\angular.min.js"></script>
-    <script type="text/javascript" src="libs\angular-1.5.0\angular-route.min.js"></script>
-    <script type="text/javascript" src="libs\angular-translate-2.9.0.1\angular-translate.min.js"></script>
-    <script type="text/javascript" src="libs\bootstrap-3.3.6-dist\js\bootstrap.min.js"></script>-->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -29,33 +23,34 @@
     <script src="bower_components/angular-translate-handler-log/angular-translate-handler-log.js"></script>
     <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
 
-    <script type="text/javascript" src="scripts\app.js"></script>
-    <script type="text/javascript" src="scripts\services\dataProvider.js"></script>
-    <script type="text/javascript" src="scripts\controllers\mainCtrl.js"></script>
-    <script type="text/javascript" src="scripts\controllers\listCtrl.js"></script>
-    <script type="text/javascript" src="scripts\controllers\detailsCtrl.js"></script>
+    <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="text/javascript" src="scripts/services/dataProvider.js"></script>
+    <script type="text/javascript" src="scripts/controllers/mainCtrl.js"></script>
+    <script type="text/javascript" src="scripts/controllers/listCtrl.js"></script>
+    <script type="text/javascript" src="scripts/controllers/detailsCtrl.js"></script>
 
 </head>
 
-<body ng-app="nuritionalValues" ng-controller="mainCtrl">
-    <header>
-        <nav class="navbar navbar-default">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="/">Nutritional Values</a>
+<body ng-controller="mainCtrl">
+    <div class="container">
+        <header>
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="/">{{ "title" | translate }}</a>
+                    </div>
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a href="#list"><i class="fa fa-shield"></i>{{ "list" | translate }}</a></li>
+                    </ul>
                 </div>
+            </nav>
+        </header>
 
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#list"><i class="fa fa-shield"></i> List</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+        <!-- MAIN CONTENT AND INJECTED VIEWS -->
+        <div id="main">
 
-    <!-- MAIN CONTENT AND INJECTED VIEWS -->
-    <div id="main">
-
-        <div ng-view></div>
+            <div ng-view></div>
+        </div>
     </div>
 </body>
 

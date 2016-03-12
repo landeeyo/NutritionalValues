@@ -1,10 +1,10 @@
-<table class="table table-stripped">
+<table class="table table-striped table-hover">
     <thead>
         <td>{{ "Name" | translate }}</td>
         <td>{{ "Kcal" | translate }} </td>
     </thead>
     <tbody>
-        <tr ng-repeat="item in items">
+        <tr ng-repeat="item in items" ng-click="details(item.name)" style="cursor:pointer">
             <td>{{ item.name | translate}}</td>
             <td>{{ item.kcal }}</td>
         </tr>
