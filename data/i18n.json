@@ -1,0 +1,19 @@
+{
+    "labels":
+    {
+        "pl":
+        {
+            "fat": "tłuszcz",
+            "fats":"tłuszcze",
+            "protein":"białko",
+            "kcal":"kcal"
+        },
+        "en":
+        {
+            "fat":"fat",
+            "fats":"fats",
+            "protein":"protein",
+            "kcal":"kcal"            
+        }        
+    }
+}
