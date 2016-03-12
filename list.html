@@ -1,6 +1,12 @@
-{{ items }}
-<table class="table">
-  <tr ng-repeat="item in items">
-    <td>Name: {{ item.name }}</td>
-  </tr>
+<!--{{ PAGE_TITLE | translate }}-->
+<table class="table table-stripped">
+    <thead>
+        <td>{{ labels.name }} </td>
+        <td></td>
+    </thead>
+    <tbody>
+        <tr ng-repeat="item in items">
+            <td>{{ item.name }}</td>
+        </tr>
+    </tbody>
 </table>

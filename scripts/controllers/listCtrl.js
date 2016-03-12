@@ -1,12 +1,6 @@
-app.controller("listCtrl", function($scope, $location) {
+app.controller("listCtrl", function($scope, $location, DataProvider) {
     console.log('listCtrl');
-    $scope.items = {
-        "almonds":
-        {
-            "name": "Almonds",
-            "kcal": 575,
-            "fat": 49,
-            "protein": 21
-        }
-    }
+    console.log(DataProvider.items);
+    $scope.labels = DataProvider.labels;
+    $scope.items = DataProvider.items;
 });

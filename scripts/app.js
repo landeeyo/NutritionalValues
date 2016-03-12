@@ -1,54 +1,132 @@
-var app = angular.module("nuritionalValues", ['ngRoute']);
+'use strict';
+
+var app = angular.module("nuritionalValues", ['ngRoute', 'pascalprecht.translate']);
 
 app.config(['$routeProvider',
-  function($routeProvider) {
-    $routeProvider.
-      when('/list', {
-        templateUrl: 'list.html',
-        controller: 'listCtrl'
-      }).
-      when('/details/:itemName', {
-        templateUrl: 'details.html',
-        controller: 'detailsCtrl'
-      }).
-      otherwise({
-        redirectTo: '/list'
-      });
-  }]);
+    function($routeProvider) {
+        $routeProvider.
+            when('/list', {
+                templateUrl: 'list.html',
+                controller: 'listCtrl'
+            }).
+            when('/details/:itemName', {
+                templateUrl: 'details.html',
+                controller: 'detailsCtrl'
+            }).
+            otherwise({
+                redirectTo: '/list'
+            });
+    }]);
 
-// configure our routes
-// app.config(function($routeProvider) {
-//     $routeProvider
+app.constant('LOCALES', {
+    'locales': {
+        'ru_RU': 'Русский',
+        'en_US': 'English'
+    },
+    'preferredLocale': 'en_US'
+});
 
-//         // route for the home page
-//         .when('/', {
-//             templateUrl: 'home.html',
-//             controller: 'mainCtrl'
-//         })
+app.config(function ($translateProvider) {
+    $translateProvider.useMissingTranslationHandlerLog();
+});
 
-//         // route for the about page
-//         .when('/list', {
-//             templateUrl: 'list.html',
-//             controller: 'listCtrl'
-//         })
+// app.config(function ($translateProvider) {
+//     $translateProvider.useStaticFilesLoader({
+//         prefix: 'resources/locale-',// path to translations files
+//         suffix: '.json'// suffix, currently- extension of the translations
+//     });
+//     $translateProvider.preferredLanguage('en_US');// is applied on first load
+//     $translateProvider.useLocalStorage();// saves selected language to localStorage
+// })
 
-//         // route for the contact page
-//         .when('/details', {
-//             templateUrl: 'details.html',
-//             controller: 'detailsCtrl'
-//         });
+// angular.module('translateApp').service('LocaleService', function ($translate, LOCALES, $rootScope, tmhDynamicLocale) {
+//     'use strict';
+//     // PREPARING LOCALES INFO
+//     var localesObj = LOCALES.locales;
+
+//     // locales and locales display names
+//     var _LOCALES = Object.keys(localesObj);
+//     if (!_LOCALES || _LOCALES.length === 0) {
+//       console.error('There are no _LOCALES provided');
+//     }
+//     var _LOCALES_DISPLAY_NAMES = [];
+//     _LOCALES.forEach(function (locale) {
+//       _LOCALES_DISPLAY_NAMES.push(localesObj[locale]);
+//     });
+    
+//     // STORING CURRENT LOCALE
+//     var currentLocale = $translate.proposedLanguage();// because of async loading
+    
+//     // METHODS
+//     var checkLocaleIsValid = function (locale) {
+//       return _LOCALES.indexOf(locale) !== -1;
+//     };
+    
+//     var setLocale = function (locale) {
+//       if (!checkLocaleIsValid(locale)) {
+//         console.error('Locale name "' + locale + '" is invalid');
+//         return;
+//       }
+//       currentLocale = locale;// updating current locale
+    
+//       // asking angular-translate to load and apply proper translations
+//       $translate.use(locale);
+//     };
+    
+//     // EVENTS
+//     // on successful applying translations by angular-translate
+//     $rootScope.$on('$translateChangeSuccess', function (event, data) {
+//       document.documentElement.setAttribute('lang', data.language);// sets "lang" attribute to html
+    
+//        // asking angular-dynamic-locale to load and apply proper AngularJS $locale setting
+//       tmhDynamicLocale.set(data.language.toLowerCase().replace(/_/g, '-'));
+//     });
+    
+//     return {
+//       getLocaleDisplayName: function () {
+//         return localesObj[currentLocale];
+//       },
+//       setLocaleByDisplayName: function (localeDisplayName) {
+//         setLocale(
+//           _LOCALES[
+//             _LOCALES_DISPLAY_NAMES.indexOf(localeDisplayName)// get locale index
+//             ]
+//         );
+//       },
+//       getLocalesDisplayNames: function () {
+//         return _LOCALES_DISPLAY_NAMES;
+//       }
+//     };
 // });
 
-// // create the controller and inject Angular's $scope
-// scotchApp.controller('mainController', function($scope) {
-//     // create a message to display in our view
-//     $scope.message = 'Everyone come and see how good I look!';
-// });
-
-// app.controller('listCtrl', function($scope) {
-//     $scope.message = 'Look! I am an about page.';
-// });
-
-// app.controller('detailsCtrl', function($scope) {
-//     $scope.message = 'Contact us! JK. This is just a demo.';
-// });
+app.factory('DataProvider', function() {
+    return {
+        labels:
+        {
+            "pl":
+            {
+                "fat": "tłuszcz",
+                "fats": "tłuszcze",
+                "protein": "białko",
+                "kcal": "kcal"
+            },
+            "en":
+            {
+                "fat": "fat",
+                "fats": "fats",
+                "protein": "protein",
+                "kcal": "kcal"
+            }
+        },
+        items:
+        {
+            "almonds":
+            {
+                "name":"Almond",
+                "kcal": 575,
+                "fat": 49,
+                "protein": 21
+            }
+        }
+    };
+});
