@@ -5,14 +5,32 @@
     <meta charset="UTF-8">
     <title></title>
 
-    <link rel="stylesheet" type="text/css" href="libs\bootstrap-3.3.6-dist\css\bootstrap.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="libs\bootstrap-3.3.6-dist\css\bootstrap.min.css">-->
+    <link rel="stylesheet" type="text/css" href="bower_components\bootstrap\dist\css\bootstrap.min.css">
 
-    <script type="text/javascript" src="libs\jquery-1.12.1\jquery-1.12.1.min.js"></script>
+    <!--<script type="text/javascript" src="libs\jquery-1.12.1\jquery-1.12.1.min.js"></script>
     <script type="text/javascript" src="libs\angular-1.5.0\angular.min.js"></script>
     <script type="text/javascript" src="libs\angular-1.5.0\angular-route.min.js"></script>
     <script type="text/javascript" src="libs\angular-translate-2.9.0.1\angular-translate.min.js"></script>
-    <script type="text/javascript" src="libs\bootstrap-3.3.6-dist\js\bootstrap.min.js"></script>
+    <script type="text/javascript" src="libs\bootstrap-3.3.6-dist\js\bootstrap.min.js"></script>-->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+    <script src="bower_components/angular-translate-storage-local/angular-translate-storage-local.js"></script>
+    <script src="bower_components/angular-translate-handler-log/angular-translate-handler-log.js"></script>
+    <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
+
     <script type="text/javascript" src="scripts\app.js"></script>
+    <script type="text/javascript" src="scripts\services\dataProvider.js"></script>
     <script type="text/javascript" src="scripts\controllers\mainCtrl.js"></script>
     <script type="text/javascript" src="scripts\controllers\listCtrl.js"></script>
     <script type="text/javascript" src="scripts\controllers\detailsCtrl.js"></script>
@@ -36,7 +54,7 @@
 
     <!-- MAIN CONTENT AND INJECTED VIEWS -->
     <div id="main">
-        
+
         <div ng-view></div>
     </div>
 </body>

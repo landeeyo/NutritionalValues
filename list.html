@@ -1,12 +1,12 @@
-<!--{{ PAGE_TITLE | translate }}-->
 <table class="table table-stripped">
     <thead>
-        <td>{{ labels.name }} </td>
-        <td></td>
+        <td>{{ "Name" | translate }}</td>
+        <td>{{ "Kcal" | translate }} </td>
     </thead>
     <tbody>
         <tr ng-repeat="item in items">
-            <td>{{ item.name }}</td>
+            <td>{{ item.name | translate}}</td>
+            <td>{{ item.kcal }}</td>
         </tr>
     </tbody>
 </table>
