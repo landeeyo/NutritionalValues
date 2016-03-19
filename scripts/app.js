@@ -20,6 +20,10 @@ var app = angular.module("nuritionalValues", ['ngAnimate',
                     templateUrl: 'details.html',
                     controller: 'detailsCtrl'
                 }).
+                when('/about', {
+                    templateUrl: 'about.html',
+                    // controller: 'detailsCtrl'
+                }).
                 otherwise({
                     redirectTo: '/list'
                 });
