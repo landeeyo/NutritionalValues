@@ -6,9 +6,9 @@
             <td>{{ "kcal" | translate | capitalize }} </td>
         </thead>
         <tbody>
-            <tr ng-repeat="item in items" ng-click="details(item.name)" style="cursor:pointer">
-                <td>{{ item.name | translate | capitalize}}</td>
-                <td>{{ item.calories }}</td>
+            <tr ng-repeat="(key,val) in items" ng-click="details(key)" style="cursor:pointer">
+                <td>{{ key | translate | capitalize}}</td>
+                <td>{{ val.calories }}</td>
             </tr>
         </tbody>
     </table>
