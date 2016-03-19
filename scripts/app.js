@@ -48,7 +48,7 @@ var app = angular.module("nuritionalValues", ['ngAnimate',
 
         $translateProvider.useStaticFilesLoader({
             prefix: 'resources/locale-',
-            suffix: '.json'
+            suffix: '.html'
         });
 
         $translateProvider.preferredLanguage(LOCALES.preferredLocale);
