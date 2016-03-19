@@ -6,11 +6,21 @@
             <td>{{ "kcal" | translate | capitalize }} </td>
         </thead>
         <tbody>
-            <tr ng-repeat="(key,val) in items" ng-click="details(key)" style="cursor:pointer">
+            <!--<tr ng-repeat="(key,val) in items" ng-click="details(key)" style="cursor:pointer">
+                <td>{{ key | capitalize}}</td>
+                <td>{{ val.calories }}</td>
+            </tr>-->
+            
+            <tr dir-paginate="(key,val) in items | itemsPerPage: 15" ng-click="details(key)" style="cursor:pointer">
                 <td>{{ key | capitalize}}</td>
                 <td>{{ val.calories }}</td>
             </tr>
+            
+            <ul>
         </tbody>
     </table>
+    <center>
+        <dir-pagination-controls></dir-pagination-controls>
+    </center>    
 </div>
 <div class="col-md-2"></div>

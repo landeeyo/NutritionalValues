@@ -7,7 +7,8 @@ var app = angular.module("nuritionalValues", ['ngAnimate',
     'ngSanitize',
     'ngTouch',
     'pascalprecht.translate',
-    'tmh.dynamicLocale'])
+    'tmh.dynamicLocale',
+    'angularUtils.directives.dirPagination'])
 
     .config(['$routeProvider',
         function($routeProvider) {
