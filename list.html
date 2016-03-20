@@ -1,26 +1,24 @@
 <div class="col-md-2"></div>
 <div class="col-md-8">
+    <div class="form-group col-md-4">
+        <input type="search" class="form-control" placeholder='{{ "typeToSearch" | translate | capitalize }}' ng-model="searchedValue" ng-change="search()">
+    </div>
+    <div class="col-md-4"></div>
+    <div class="col-md-4"></div>
     <table class="table table-striped table-hover">
         <thead>
             <td>{{ "name" | translate | capitalize }}</td>
             <td>{{ "kcal" | translate | capitalize }} </td>
         </thead>
         <tbody>
-            <!--<tr ng-repeat="(key,val) in items" ng-click="details(key)" style="cursor:pointer">
-                <td>{{ key | capitalize}}</td>
-                <td>{{ val.calories }}</td>
-            </tr>-->
-            
             <tr dir-paginate="(key,val) in items | itemsPerPage: 15" ng-click="details(key)" style="cursor:pointer">
                 <td>{{ key | capitalize}}</td>
                 <td>{{ val.calories }}</td>
             </tr>
-            
-            <ul>
         </tbody>
     </table>
     <center>
         <dir-pagination-controls></dir-pagination-controls>
-    </center>    
+    </center>
 </div>
 <div class="col-md-2"></div>

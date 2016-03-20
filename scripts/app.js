@@ -8,7 +8,8 @@ var app = angular.module("nuritionalValues", ['ngAnimate',
     'ngTouch',
     'pascalprecht.translate',
     'tmh.dynamicLocale',
-    'angularUtils.directives.dirPagination'])
+    'angularUtils.directives.dirPagination',
+    'angular-linq'])
 
     .config(['$routeProvider',
         function($routeProvider) {
