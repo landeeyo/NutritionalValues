@@ -20,7 +20,7 @@
         </thead>
         <tbody>
             <tr dir-paginate="(key,val) in items | itemsPerPage: 15" ng-click="details(key)" style="cursor:pointer">
-                <td>{{ key | capitalize}}</td>
+                <td><a href="#/details/{{key}}">{{ key | capitalize}}</a></td>
                 <td>{{ val.calories }}</td>
             </tr>
         </tbody>
