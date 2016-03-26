@@ -34,8 +34,8 @@ var app = angular.module("nuritionalValues", ['ngAnimate',
 
     .constant('LOCALES', {
         'locales': {
-            'en_US': 'English',
-            'pl': 'Polski'
+            'en_US': 'English'//,
+            // 'pl': 'Polski'
         },
         'preferredLocale': 'en_US'
     })
@@ -57,9 +57,9 @@ var app = angular.module("nuritionalValues", ['ngAnimate',
             suffix: '.html'
         });
 
-        $translateProvider.preferredLanguage(LOCALES.preferredLocale);
-        $translateProvider.preferredLanguage('pl');
-        $translateProvider.useLocalStorage();
+         //$translateProvider.preferredLanguage(LOCALES.preferredLocale);
+         $translateProvider.preferredLanguage('en_US');
+        // $translateProvider.useLocalStorage();
     })
     // Angular Dynamic Locale
     .config(function(tmhDynamicLocaleProvider) {
